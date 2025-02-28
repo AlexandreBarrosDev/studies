@@ -1,3 +1,17 @@
+<div class="container">
+  <div class="col-md-4 input-group mb-3">
+    <input type="text" class="form-control" placeholder="Busque por um usuário" aria-label="Busque por um usuário">
+    <button
+    (onclick)="getGitUser()"
+    class="btn btn-primary"
+    type="button" id="button-addon2"
+    [(ngModel)]="username"
+    name="username"
+    >
+      Pesquisar
+    </button>
+  </div>
+</div>
 <div class="card">
   <div class="container">
     <div class="row">

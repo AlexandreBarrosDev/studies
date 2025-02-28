@@ -1,23 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { UserGit } from '../../models/userGit';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent{
   user: UserGit | undefined;
+  username: string = '';
   constructor(private userService: UserService) { }
 
-  ngOnInit(): void {
-    this.getGitUser();
-  }
-
   getGitUser() {
-    this.userService.getGitUser('facebook').subscribe((response: UserGit) => {
+    this.userService.getGitUser(this.username).subscribe((response: UserGit) => {
       this.user = response;
     })
   }
