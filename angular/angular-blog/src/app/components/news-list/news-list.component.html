@@ -1,0 +1,13 @@
+<div class="news-list">
+  <h2>Ultimas noticias</h2>
+  <div class="latest-news">
+    @for (news of newsList; track news.id) {
+      <app-news-ui>
+        <app-news
+          [title]="news.title"
+          [description]="news.description"
+        />
+      </app-news-ui>
+    }
+  </div>
+</div>

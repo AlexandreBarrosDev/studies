@@ -1,0 +1,10 @@
+.news-ui {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border: solid 1px #bbb;
+    border-radius: 1rem;
+    background-color: #ddd;
+    margin: 1rem;
+}
